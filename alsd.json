@@ -1,0 +1,8 @@
+{
+    "device": "/dev/gpioals_device",
+    "rate": 14000,
+    "mqtt": {
+        "broker": "192.168.2.1",
+        "topic": "sensors/als"
+    }
+}

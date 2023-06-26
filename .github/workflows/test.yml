@@ -1,0 +1,21 @@
+name: ci
+
+on: [push, pull_request]
+
+jobs:
+  test:
+    runs-on: ubuntu-22.04
+
+    steps:
+
+    - name: checkout
+      uses: actions/checkout@v3
+
+    - name: Build
+      run: cargo build --verbose
+
+    - name: Run clippy
+      run: cargo clippy --verbose
+
+    - name: Run fmt
+      run: cargo fmt --all --check
